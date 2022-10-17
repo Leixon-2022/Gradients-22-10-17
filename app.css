@@ -1,0 +1,234 @@
+html body {
+    margin: 0;
+    background-color: black;
+    max-width: 100%;
+    color: white;
+}
+.gradient-textNoHover {
+    /* Fallback: Set a background color. */
+    background-color: red;
+    
+    /* Create the gradient. */
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+  
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+
+.gradient-text {
+    /* Fallback: Set a background color. */
+    background-color: #CA4246;
+    
+    /* Create the gradient. */
+     background-image: linear-gradient(
+          45deg,
+          #CA4246 16.666%, 
+          #E16541 16.666%, 
+          #E16541 33.333%, 
+          #F18F43 33.333%, 
+          #F18F43 50%, 
+          #8B9862 50%, 
+          #8B9862 66.666%, 
+          #476098 66.666%, 
+          #476098 83.333%, 
+          #A7489B 83.333%);
+    
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+  
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    
+    /* Animate the text when loading the element. */
+      /* This animates it on page load and when hovering out. */
+      animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+  
+  }
+  
+  .gradient-text:hover{
+      animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+  }
+  
+  
+  /* Move the background and make it smaller. */
+  /* Animation shown when entering the page and after the hover animation. */
+  @keyframes rainbow-text-simple-animation-rev {
+      0% {
+          background-size: 650%;
+      }
+      40% {
+          background-size: 650%;
+      }
+      100% {
+          background-size: 100%;
+      }
+  }
+  
+  /* Move the background and make it larger. */
+  /* Animation shown when hovering over the text. */
+  @keyframes rainbow-text-simple-animation {
+      0% {
+          background-size: 100%;
+      }
+      80% {
+          background-size: 650%;
+      }
+      100% {
+          background-size: 650%;
+      }
+  }
+  header {
+    margin: 1rem;
+
+  }
+  
+  h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: normal;
+    font-size: 7rem;
+    text-align: center;
+    margin-bottom: 0;
+    margin-bottom: -0.25em;
+  }
+
+p {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: normal;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+
+/* Box´s that holding the linear gradient examples */
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+}
+.row {
+    flex-direction: row;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 12px;
+    border: 1px solid black;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+  
+  span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    font-size: 1.6rem;
+  }
+
+
+
+
+
+
+
+  /* linear gradient examples */
+  .wrapper-1 {
+    background: linear-gradient(#e66465, #9198e5); 
+  }
+  
+  .wrapper-2 {
+    background: linear-gradient(45deg, #e66465, #9198e5);
+  }
+
+  .wrapper-3 {
+    background: linear-gradient(45deg, #e66465, #9198e5, #12045b, #1afe49);
+  }
+  
+  .wrapper-4 {
+    background: linear-gradient(
+      45deg,
+      #e66465 0%,
+      #9198e5 20%,
+      #12045b 40%,
+      #1afe49 80%
+    );
+  }
+
+  .wrapper-5 {
+    background: linear-gradient(90deg, green 33%, white 33%, white 66%, red 66%);
+  }
+  
+  .wrapper-6 {
+    background-image: repeating-linear-gradient(
+      90deg,
+      blue 20px,
+      salmon 40px,
+      red 80px,
+      blue 120px
+    );
+  }
+  .wrapper-7 {
+    background-image: radial-gradient(red, black);
+  }
+  
+  .wrapper-8 {
+    background-image: repeating-radial-gradient(
+      circle,
+      red 0,
+      red 30px,
+      black 30px,
+      black 60px
+    );
+  }
+  .wrapper-9 {
+    background: linear-gradient(yellow, red);
+  }
+  .wrapper-10 {
+    background: linear-gradient(150deg, yellow, red);
+  }
+  .wrapper-11 {
+    /* These two declarations do the same */
+    background: radial-gradient(at 100% 100%, yellow, red);
+    background: radial-gradient(at bottom right, yellow, red);
+  }
+  .wrapper-12 {
+    background: radial-gradient(at 20% 70%, yellow, red);
+  }
+  .wrapper-13 {
+    background: radial-gradient( yellow, red);
+  }
+  .wrapper-14 {
+    background: radial-gradient(circle, yellow, red);
+  }
+  .wrapper-15 {
+    background: radial-gradient(circle, lightpink, crimson, indigo);
+  }
+  .wrapper-16 {
+    background: radial-gradient(circle closest-side, lightpink, crimson, indigo);
+  }
+  .wrapper-17 {
+    background: radial-gradient(circle 120px at 30% 75%, lightpink, crimson, indigo);
+  }
+  .wrapper-18 {
+    background: radial-gradient(lightpink, crimson, indigo);
+  }
+  .wrapper-19 {
+    background: radial-gradient(closest-side, lightpink, crimson, indigo);
+  }
+  .wrapper-20 {
+    background: radial-gradient(closest-side at 40% 65%, lightpink, crimson, indigo);
+  }
